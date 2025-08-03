@@ -1,11 +1,7 @@
-import Alpine from 'alpinejs'
-import { app } from './components/app.js'
+import { createApp } from 'vue'
+import App from './App.vue'
 
-import 'bootstrap/dist/css/bootstrap.rtl.min.css'
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import '../style.css'
+// Import the main stylesheet which now contains Tailwind's directives
+import './assets/style.css'
 
-window.Alpine = Alpine
-
-Alpine.data('app', app)
-Alpine.start()
+createApp(App).mount('#app')
