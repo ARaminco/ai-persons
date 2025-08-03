@@ -1,4 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import Alpine from 'alpinejs'
+import { app } from './components/app.js'
 
-createApp(App).mount('#app')
+import 'bootstrap/dist/css/bootstrap.rtl.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import '../style.css'
+
+window.Alpine = Alpine
+
+Alpine.data('app', app)
+Alpine.start()
